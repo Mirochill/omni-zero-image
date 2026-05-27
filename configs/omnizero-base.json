@@ -1,0 +1,15 @@
+{
+  "image_size": 1024,
+  "latent_channels": 4,
+  "latent_downsample": 8,
+  "text_vocab_size": 262144,
+  "text_max_tokens": 192,
+  "text_dim": 1024,
+  "model_dim": 1536,
+  "layers": 28,
+  "heads": 24,
+  "mlp_ratio": 4,
+  "dropout": 0.0,
+  "patch_size": 2
+}
+
