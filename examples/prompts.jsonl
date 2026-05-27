@@ -1,0 +1,4 @@
+{"id":"city","prompt":"a coherent futuristic city at sunrise, glass towers, warm light","mode":"text-to-image"}
+{"id":"product","prompt":"a detailed product photo of a transparent wireless speaker on a white desk","mode":"text-to-image"}
+{"id":"edit-warm-light","prompt":"make the lighting warmer and keep the object identity unchanged","mode":"image-to-image"}
+

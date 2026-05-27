@@ -1,0 +1,27 @@
+name: samples
+
+on:
+  workflow_dispatch:
+
+jobs:
+  draft-samples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Generate draft samples
+        run: |
+          mkdir -p outputs
+          omnizero generate --mode draft --prompt "a coherent futuristic city at sunrise" --out outputs/city.png --size 512 --seed 1
+          omnizero generate --mode draft --prompt "a detailed product photo of a transparent wireless speaker" --out outputs/product.png --size 512 --seed 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: omnizero-draft-samples
+          path: outputs/*.png
+
